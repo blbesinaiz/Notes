@@ -8,9 +8,9 @@
 - Allows you to monitor/analyze 500 MB per day
 
 ## Resources
-# Development Videos
-- [Crash Brief](https://www.youtube.com/watch?v=6lX4DOd1T-s)
+### Development Videos
+- [Crash Brief](https://www.youtube.com/watch?v=6lX4DOd1T-s) on Splunk
 - Youtube Channel: [Splunk How-To](https://www.youtube.com/channel/UCjwOFZzLPnji1EstaVyyvAw)
-  - Playlist: Splunk Fundamentals, Splunk For Security
+  - Playlist to Check Out: Splunk Fundamentals, Splunk For Security
 
 ## Command Commands
