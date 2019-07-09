@@ -1,4 +1,4 @@
-# WIFI Ethical Hacking (Kali Linux)
+# Wi-Fi Ethical Hacking (Kali Linux)
 *This document is intended for educational purposes only!
 It is a criminal offense to crack into someone's WIFI unlawfully
 or withouth **written** consent.*
@@ -38,7 +38,7 @@ or withouth **written** consent.*
  2. Uncomment `Dyanmic` and leave the other options commented   
  3. Add a Proxy
     - At EOF add desired proxy with port number
-      - ie Socks5 127.0.0.1 9050
+    - `Socks5 127.0.0.1 9050`
       
 ## 2. Spoof MAC Address
 Get your IP: `ifconfig` or `macchanger -s eth0`
@@ -49,6 +49,27 @@ Get your IP: `ifconfig` or `macchanger -s eth0`
       - Run `crontab -e`
       - Enter `@ reboot macchanger -r eth0`
       - Exit
+## 3. Crunch - Password Wordlist Generator
+- Crunch generates wordlist based on parameters set on it
+- `crunch 3 5 1234567`: Generates 3 - 5 character string using numbers 1-7
+- `crunch | aircrack`: Pipe this wordlist into aircrack for it to use
+
+## 4. Aircrack-ng  - Crack into WiFi
+- Need to know something about password in order to expedite WiFi cracking process
+- If know nothing about password, better off exploiting router vulnerabilty
+### Change NIC into Monitor Mode
+- Put the Network Interface Card into monitor mode to scann the network
+- In steps, used wl01 for NIC name; should substitute with actual name you want to use
+1. `ifconfig wl01 down`
+2. `ifconfig wl01 mode monitor`
+3. `ifconfig wl01 up`
+4. ifconfig ==> check to see if NIC running
+### Check for Background Services
+- Need to kill background services as may hamper with host scanning\
+- Should kill network admin first if running
+1. `airmon-ng check wl01`: Checks processes currently running
+2. `airmon-ng kill wl01`: Kills proccesses running; may need to do repeatedly
+###
 
 ## Resources
 - [Learn Ethical Hacking With Kali Linux](https://youtu.be/0uvWRwLs5Zo)
