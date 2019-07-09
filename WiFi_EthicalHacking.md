@@ -60,15 +60,15 @@ Get your IP: `ifconfig` or `macchanger -s eth0`
 ### Change NIC into Monitor Mode
 - Put the Network Interface Card into monitor mode to scann the network
 - In steps, used wl01 for NIC name; should substitute with actual name you want to use
-1. `ifconfig wl01 down`
-2. `ifconfig wl01 mode monitor`
-3. `ifconfig wl01 up`
-4. ifconfig ==> check to see if NIC running
+  1. `ifconfig wl01 down`
+  2. `ifconfig wl01 mode monitor`
+  3. `ifconfig wl01 up`
+  4. ifconfig ==> check to see if NIC running
 ### Check for Background Services
 - Need to kill background services as may hamper with host scanning\
 - Should kill network admin first if running
-1. `airmon-ng check wl01`: Checks processes currently running
-2. `airmon-ng kill wl01`: Kills proccesses running; may need to do repeatedly
+  1. `airmon-ng check wl01`: Checks processes currently running
+  2. `airmon-ng kill wl01`: Kills proccesses running; may need to do repeatedly
 ###
 
 ## Resources
