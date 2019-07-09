@@ -24,7 +24,6 @@ or withouth **written** consent.*
  
  
  ## 1. Proxy Chains
- 
  ### Why are they used?
  - Used when want to anonymize oneself on the network
  - Basically uses a series of servers to bounce IP around in order to keeps one's IP unkown
@@ -36,12 +35,20 @@ or withouth **written** consent.*
     - **Socks5 Proxy**: Best proxy to use as can anonymize all types of traffic
     - **Socks4 Proxy**: Similar to Socks5 but can't anonymyze UDP and other forms of traffic
     - **Dynamic**: Proxy setting most commonly used as most stable
-    
- 2. Add a Proxy
+ 2. Uncomment `Dyanmic` and leave the other options commented   
+ 3. Add a Proxy
     - At EOF add desired proxy with port number
       - ie Socks5 127.0.0.1 9050
       
-
+## 2. Spoof MAC Address
+Get your IP: `ifconfig` or `macchanger -s eth0`
+  1. Spoof yourself by changing MAC address
+      - `maachanger -r eth0`: Assigns random MAC address to device
+      - If want to blend in more to network, can pick MAC address with similar beginning numbers. Simply run a `maachanger -help` command to explore options available in tool
+  2. Configure Linux to change MAC address on boot
+      - Run `crontab -e`
+      - Enter `@ reboot macchanger -r eth0`
+      - Exit
 
 ## Resources
 - [Learn Ethical Hacking With Kali Linux](https://youtu.be/0uvWRwLs5Zo)
